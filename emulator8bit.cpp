@@ -22,7 +22,6 @@ byte screenData[64] [32]; // 64x32 pixel screen
 // Function to reset/set the CPU state
 // This function initializes the CPU state, including memory, registers, and program counter.
 // It also loads a game into memory from a file. (maybe it should be a parameter)
-// The game is loaded starting from memory address 0x200.
 void CPUReset() {
     adressI = 0;
     programCounter = 0x200; //starts at 0x200
@@ -32,7 +31,6 @@ void CPUReset() {
     FILE *gameFile;
     gameFile = fopen("Space Invaders.ch8", "rb");
     
-    // why null is capslock? kkkkkk
     if (gameFile == NULL) {
         std::cout << "Error opening game file." << std::endl;
         return;
