@@ -14,10 +14,8 @@ word adressI; // Index register
 word programCounter; // Program counter
 
 std::vector<word> stack; // i need to see how this actually works
-// Stack is used to store return addresses for subroutines
 
 byte screenData[64] [32]; // 64x32 pixel screen
-// Each pixel is represented by a byte, 0 for off, 1 for on
 
 // Function to reset/set the CPU state
 // This function initializes the CPU state, including memory, registers, and program counter.
@@ -52,13 +50,8 @@ word getNextOpcode() {
     return res;
 }
 
+void handleOpcode(word opcode){
+    // this function will handle the opcode
+}
 //maybe in another class?
 word opcode = getNextOpcode();
-
-/*
-word firstNumber = opcode & 0xF000; // Get the first number from the opcode
-word secondNumber = opcode & 0x0F00; // Get the second number from the opcode
-word secondAndLastNumber = opcode & 0x0F0F; // Get the second and last number from the opcode
-word lastTwoNumbers = opcode & 0x00FF; // Get the last two numbers from the opcode
-*/
-
