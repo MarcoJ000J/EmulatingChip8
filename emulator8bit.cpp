@@ -52,6 +52,18 @@ word getNextOpcode() {
 
 void handleOpcode(word opcode){
     // this function will handle the opcode
+    switch (opcode & 0xf000){
+        case 0x0000: break;
+        case 0x1000: 
+            //make it actualy do something    
+        break;
+        case 0x2000: break;
+    }
+}
+
+//this is the way to handle the opcodes
+void OxONNN(word opcode){
+
 }
 //maybe in another class?
 word opcode = getNextOpcode();
